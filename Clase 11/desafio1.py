@@ -2,18 +2,26 @@
 # Transforma este código en un conjunto de clases 
 # (Triangulo y Rectángulo) que tengan métodos para calcular su área.
 
-def calcular_area_triangulo(base, altura):
-    return (base * altura) / 2
+class FiguraGeometrica:
+    """Clase base para figuras geométricas"""
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
 
-def calcular_area_rectangulo(base, altura):
-    return base * altura
+class Triangulo(FiguraGeometrica):
+    """Clase que representa un triángulo"""
+    def calcular_area(self):
+        return (self.base * self.altura) / 2
 
-base_triangulo = 5
-altura_triangulo = 8
-area_triangulo = calcular_area_triangulo(base_triangulo, altura_triangulo)
-print(f"Área del triángulo: {area_triangulo}")
+class Rectangulo(FiguraGeometrica):
+    """Clase que representa un rectángulo"""
+    def calcular_area(self):
+        return self.base * self.altura
 
-base_rectangulo = 6
-altura_rectangulo = 4
-area_rectangulo = calcular_area_rectangulo(base_rectangulo, altura_rectangulo)
-print(f"Área del rectángulo: {area_rectangulo}")
+# Crear instancias de las figuras
+triangulo = Triangulo(5, 8)
+rectangulo = Rectangulo(6, 4)
+
+# Calcular y mostrar áreas
+print(f"Área del triángulo: {triangulo.calcular_area()}")
+print(f"Área del rectángulo: {rectangulo.calcular_area()}")
