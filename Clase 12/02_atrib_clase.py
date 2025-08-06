@@ -17,3 +17,8 @@ Ejemplo.atributo_clase = 20
 print("Atributo de clase modificado:", Ejemplo.atributo_clase) # Salida: 20
 print("Atributo de instancia instancia1 modificado:", instancia1.atributo_clase)
 print("Atributo de instancia instancia2 modificado:", instancia2.atributo_clase)
+
+instancia1.atributo_clase = 30
+print("Atributo de clase modificado:", Ejemplo.atributo_clase) 
+print("Atributo de instancia instancia1 modificado:", instancia1.atributo_clase)
+print("Atributo de instancia instancia2 modificado:", instancia2.atributo_clase)
